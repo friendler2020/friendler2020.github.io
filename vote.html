@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>vote for uniterd states</title>
+    <meta charset="utf-8"/>
+
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+  </head>
+  <body>
+    <h1>who wil you voting for???</h1>
+    <a href="http://thefriendler.epizy.com">cliclk to go back</a>
+    <br><br>
+    <form action="">
+      <input type="radio" id="i1" name="i"></input>
+      <label>the friendler</label><br>
+      <input type="radio" id="i2" name="i"></input>
+      <label>joe biderm</label><br>
+      <input type="radio" id="i3" name="i"></input>
+      <label>dondlad trup</label><br>
+    </form>
+    <button id="sb" onclick="check()">sumbmit</button>
+    <p id="res"></p>
+    <script>
+      function check() {
+        var poll = [
+          document.getElementById("i1").checked,
+          document.getElementById("i2").checked,
+          document.getElementById("i3").checked,
+        ];
+        var res = document.getElementById('res');
+        if (poll[1] || poll[2]) {
+          res.innerHTML = `<b style="color: red;">NO! NO! NO! NO! YOUR A STUPID BUTT!</b>`
+        } else if (poll[0]) {
+          res.innerHTML = "Good at you! thank you for votign for the friendler!"
+        }
+      }
+    </script>
+  </body>
+</html>
